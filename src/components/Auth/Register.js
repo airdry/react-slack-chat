@@ -72,7 +72,10 @@ class Register extends React.Component {
       this.setState({ errors: [], loading: true });
       firebase
         .auth()
-        .createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .createUserWithEmailAndPassword(
+          this.state.email,
+          this.state.password
+        )
         .then(createdUser => {
           console.log(createdUser);
           createdUser.user
@@ -113,7 +116,9 @@ class Register extends React.Component {
   };
 
   handleInputError = (errors, inputName) => {
-    return errors.some(error => error.message.toLowerCase().includes(inputName))
+    return errors.some(error =>
+      error.message.toLowerCase().includes(inputName)
+    )
       ? 'error'
       : '';
   };
@@ -133,7 +138,7 @@ class Register extends React.Component {
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="orange" textAlign="center">
             <Icon name="puzzle piece" color="orange" />
-            Register for Chat
+            Register for DevChat
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
             <Segment stacked>

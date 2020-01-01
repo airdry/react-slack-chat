@@ -49,7 +49,9 @@ class Login extends React.Component {
   isFormValid = ({ email, password }) => email && password;
 
   handleInputError = (errors, inputName) => {
-    return errors.some(error => error.message.toLowerCase().includes(inputName))
+    return errors.some(error =>
+      error.message.toLowerCase().includes(inputName)
+    )
       ? 'error'
       : '';
   };
@@ -62,7 +64,7 @@ class Login extends React.Component {
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as="h1" icon color="violet" textAlign="center">
             <Icon name="code branch" color="violet" />
-            Login to Chat
+            Login to DevChat
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
             <Segment stacked>

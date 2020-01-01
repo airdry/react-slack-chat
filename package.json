@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pretty": "prettier --write '**/*.{css,html,js}'"
   },
   "browserslist": {
     "production": [
@@ -37,5 +38,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "printWidth": 75,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
   }
 }
