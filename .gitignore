@@ -5,3 +5,4 @@ build
 .firebase
 database.rules.json
 storage.rules
+.firebaserc
